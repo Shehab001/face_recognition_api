@@ -25,7 +25,7 @@ const db = knex({
 });
 
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({ mode: "no-cors" }));
 
 app.get("/", (req, res) => {
   res.send("Working...");
